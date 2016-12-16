@@ -1,2 +1,3 @@
 sudo /usr/sbin/lpadmin -p copy4 -E -v https://cups.cysec.de:631/printers/copy_4 -P /Library/Printers/PPDs/Contents/Resources/KONICAMINOLTAC368.gz -D CYSEC_Copy_4 -L 4.3.06 -o PageSize=A4 -o printer-is-shared=false ;
+
 sudo sed -i.bak -e 's/DefaultPaperSources: None/DefaultPaperSources: PC410/g' -e 's/DefaultFinisher: None/DefaultFinisher: FS534SD/g' -e 's/DefaultKMPunchUnit: None/DefaultKMPunchUnit: PK520-EU4/g' /private/etc/cups/ppd/copy4.ppd
